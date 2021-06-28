@@ -63,15 +63,15 @@ extra_requirements = [
 
 
 setup(
-    name="uvicorn",
-    version=get_version("uvicorn"),
+    name="foodalgo-uvicorn",
+    version="1.0.2",
     url="https://github.com/encode/uvicorn",
     license="BSD",
     description="The lightning-fast ASGI server.",
     long_description=get_long_description(),
     long_description_content_type="text/markdown",
-    author="Tom Christie",
-    author_email="tom@tomchristie.com",
+    author="yungkit.lai",
+    author_email="ginolai@qq.com",
     packages=get_packages("uvicorn"),
     install_requires=minimal_requirements,
     extras_require={"standard": extra_requirements},
