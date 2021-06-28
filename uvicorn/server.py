@@ -307,7 +307,13 @@ class Server:
 
     def handle_exit(self, sig: signal.Signals, frame: FrameType) -> None:
 
+
+
         if self.should_exit:
-            self.force_exit = True
+            server_type = os.getenv("SERVER_TYPE", "")
+            if server_type == "GUNICORN" and sig == signal.SIGTERM:
+                pass
+            else:
+                self.force_exit = True
         else:
             self.should_exit = True
